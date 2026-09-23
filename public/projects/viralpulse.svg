@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1f3a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bg1)" rx="20"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="60" fill="url(#bg2)" rx="20" ry="20"/>
+  <text x="300" y="38" text-anchor="middle" dominant-baseline="middle"
+        font-family="Orbitron, sans-serif" font-size="24" font-weight="700" fill="#ffffff">
+    VIRAL PULSE IA
+  </text>
+  
+  <!-- AI Brain illustration -->
+  <circle cx="300" cy="150" r="80" fill="none" stroke="url(#purple)" stroke-width="2" opacity="0.6"/>
+  <circle cx="300" cy="150" r="60" fill="none" stroke="url(#cyan)" stroke-width="2" opacity="0.8"/>
+  <circle cx="300" cy="150" r="40" fill="none" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Central AI core -->
+  <circle cx="300" cy="150" r="30" fill="url(#purple)" filter="url(#glow)"/>
+  <text x="300" y="155" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">
+    AI
+  </text>
+  
+  <!-- Pulses -->
+  <path d="M200 150 Q300 100 400 150" fill="none" stroke="url(#cyan)" stroke-width="2" opacity="0.6"/>
+  <path d="M200 150 Q300 200 400 150" fill="none" stroke="url(#purple)" stroke-width="2" opacity="0.6"/>
+  <path d="M150 200 Q300 150 450 200" fill="none" stroke="url(#cyan)" stroke-width="2" opacity="0.4"/>
+  <path d="M150 300 Q300 250 450 300" fill="none" stroke="url(#purple)" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Title -->
+  <text x="300" y="240" text-anchor="middle" dominant-baseline="middle"
+        font-family="Orbitron, sans-serif" font-size="18" font-weight="600" fill="#ffffff">
+    ANALYSE DES TENDANCES
+  </text>
+  <text x="300" y="265" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="12" fill="#cccccc">
+    Prédiction intelligente des contenus viraux
+  </text>
+  
+  <!-- Stats -->
+  <rect x="100" y="290" width="120" height="60" fill="#1a1f3a" opacity="0.8" rx="5"/>
+  <rect x="260" y="290" width="120" height="60" fill="#1a1f3a" opacity="0.8" rx="5"/>
+  <rect x="420" y="290" width="120" height="60" fill="#1a1f3a" opacity="0.8" rx="5"/>
+  
+  <text x="160" y="310" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="10" fill="#cccccc">
+    TENDANCES
+  </text>
+  <text x="160" y="330" text-anchor="middle" dominant-baseline="middle"
+        font-family="Orbitron, sans-serif" font-size="18" font-weight="700" fill="url(#cyan)">
+    1.2M+
+  </text>
+  
+  <text x="320" y="310" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="10" fill="#cccccc">
+    ANALYSES
+  </text>
+  <text x="320" y="330" text-anchor="middle" dominant-baseline="middle"
+        font-family="Orbitron, sans-serif" font-size="18" font-weight="700" fill="url(#purple)">
+    99.9%
+  </text>
+  
+  <text x="480" y="310" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="10" fill="#cccccc">
+    PRÉCISION
+  </text>
+  <text x="480" y="330" text-anchor="middle" dominant-baseline="middle"
+        font-family="Orbitron, sans-serif" font-size="18" font-weight="700" fill="#ffffff">
+    100%
+  </text>
+  
+  <!-- Footer -->
+  <rect x="0" y="380" width="600" height="20" fill="url(#bg2)" rx="20" ry="20"/>
+  <text x="300" y="395" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="10" fill="#cccccc">
+    Viral Pulse IA - L'intelligence artificielle au service des tendances
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="3" fill="url(#cyan)" opacity="0.6"/>
+  <circle cx="550" cy="50" r="3" fill="url(#purple)" opacity="0.6"/>
+  <circle cx="50" cy="350" r="3" fill="url(#purple)" opacity="0.6"/>
+  <circle cx="550" cy="350" r="3" fill="url(#cyan)" opacity="0.6"/>
+</svg>

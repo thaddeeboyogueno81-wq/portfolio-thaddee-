@@ -16,8 +16,8 @@ import {
 import AnimatedSection from '../components/AnimatedSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 
-// Placeholder for profile image - replace with actual image path
-const profileImage = '/profile.jpg';
+// Profile image
+const profileImage = '/profile.svg';
 
 const skills = {
   frontend: [

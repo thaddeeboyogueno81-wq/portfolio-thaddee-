@@ -15,9 +15,9 @@ const resources = {
       changeLanguage: 'Changer de langue',
       
       // Hero Section
-      heroTitle: 'Développeur Web Freelance',
+      heroTitle: 'Développeur Web Fullstack',
       heroSubtitle: 'Création de sites web modernes et performants',
-      heroDescription: 'Je conçois des expériences digitales uniques qui transforment vos idées en réalité. Spécialisé dans le développement frontend avec React, Next.js et Tailwind CSS.',
+      heroDescription: 'Je conçois des expériences digitales uniques qui transforment vos idées en réalité. Passionné par le développement avec React, Next.js, Node.js et les bases de données modernes.',
       ctaPrimary: 'Voir mes projets',
       ctaSecondary: 'Me contacter',
       
@@ -28,7 +28,7 @@ const resources = {
       aboutAge: '21 ans',
       aboutRole: 'Développeur Web Fullstack',
       aboutDescription1: 'Passionné par la technologie et le design, je crée des applications web performantes et esthétiques. Mon approche combine créativité, technique et attention aux détails pour livrer des produits qui dépassent les attentes.',
-      aboutDescription2: 'Avec une expertise en JavaScript, TypeScript, React, Node.js et les bases de données modernes, je suis capable de gérer des projets de A à Z, du concept à la mise en production.',
+      aboutDescription2: 'Avec une expertise en JavaScript, TypeScript, React, Node.js, Express et les bases de données, je suis capable de gérer des projets de A à Z, du concept à la mise en production. J\'aime résoudre des problèmes complexes avec des solutions élégantes.',
       aboutSkills: 'Mes compétences',
       aboutExperience: 'Expérience',
       aboutEducation: 'Formation',
@@ -41,7 +41,7 @@ const resources = {
       // Projects Section
       projectsTitle: 'Mes Projets',
       projectsSubtitle: 'Réalisations récentes',
-      projectsDescription: 'Découvrez une sélection de mes projets les plus marquants. Chaque projet représente une solution unique adaptée aux besoins spécifiques du client.',
+      projectsDescription: 'Découvrez mes projets réalisés. Chaque projet représente une solution unique adaptée aux besoins spécifiques.',
       viewProject: 'Voir le projet',
       visitSite: 'Visiter le site',
       
@@ -53,7 +53,7 @@ const resources = {
       contactName: 'Nom',
       contactNamePlaceholder: 'Votre nom complet',
       contactEmail: 'Email',
-      contactEmailPlaceholder: 'votre@email.com',
+      contactEmailPlaceholder: 'thaddeeboyogueno81@gmail.com',
       contactSubject: 'Sujet',
       contactSubjectPlaceholder: 'Objet de votre message',
       contactMessage: 'Message',
@@ -70,7 +70,7 @@ const resources = {
       whatsapp: 'WhatsApp',
       
       // Footer
-      footerDescription: 'Développeur web freelance spécialisé dans la création de sites modernes et performants.',
+      footerDescription: 'Développeur web fullstack de 21 ans, spécialisé dans la création de sites modernes et performants avec React, Node.js et plus.',
       footerRights: 'Tous droits réservés',
       
       // Stats
@@ -82,13 +82,13 @@ const resources = {
       servicesTitle: 'Mes Services',
       servicesSubtitle: 'Ce que je propose',
       serviceWebDev: 'Développement Web',
-      serviceWebDevDesc: 'Création de sites web sur mesure avec les dernières technologies.',
-      serviceMobile: 'Applications Mobile',
-      serviceMobileDesc: 'Développement d\'applications mobiles réactives et performantes.',
+      serviceWebDevDesc: 'Création de sites web sur mesure avec les dernières technologies (React, Next.js, Tailwind CSS).',
+      serviceMobile: 'Applications Responsive',
+      serviceMobileDesc: 'Développement d\'applications qui s\'adaptent parfaitement à tous les écrans.',
       serviceUIUX: 'Design UI/UX',
       serviceUIUXDesc: 'Conception d\'interfaces utilisateur intuitives et esthétiques.',
-      serviceSEO: 'Optimisation SEO',
-      serviceSEODesc: 'Amélioration de la visibilité de votre site sur les moteurs de recherche.',
+      serviceSEO: 'Optimisation',
+      serviceSEODesc: 'Amélioration des performances et de la visibilité de votre site.',
     }
   },
   en: {
@@ -104,9 +104,9 @@ const resources = {
       changeLanguage: 'Change language',
       
       // Hero Section
-      heroTitle: 'Freelance Web Developer',
+      heroTitle: 'Fullstack Web Developer',
       heroSubtitle: 'Building modern and performant websites',
-      heroDescription: 'I create unique digital experiences that turn your ideas into reality. Specialized in frontend development with React, Next.js, and Tailwind CSS.',
+      heroDescription: 'I create unique digital experiences that turn your ideas into reality. Specialized in fullstack development with React, Next.js, Node.js, and modern databases.',
       ctaPrimary: 'View my projects',
       ctaSecondary: 'Contact me',
       
@@ -117,7 +117,7 @@ const resources = {
       aboutAge: '21 years old',
       aboutRole: 'Fullstack Web Developer',
       aboutDescription1: 'Passionate about technology and design, I create performant and aesthetic web applications. My approach combines creativity, technical skills, and attention to detail to deliver products that exceed expectations.',
-      aboutDescription2: 'With expertise in JavaScript, TypeScript, React, Node.js, and modern databases, I can handle projects from A to Z, from concept to production deployment.',
+      aboutDescription2: 'With expertise in JavaScript, TypeScript, React, Node.js, Express, and databases, I can handle projects from A to Z, from concept to production deployment. I love solving complex problems with elegant solutions.',
       aboutSkills: 'My Skills',
       aboutExperience: 'Experience',
       aboutEducation: 'Education',
@@ -130,7 +130,7 @@ const resources = {
       // Projects Section
       projectsTitle: 'My Projects',
       projectsSubtitle: 'Recent Works',
-      projectsDescription: 'Discover a selection of my most notable projects. Each project represents a unique solution tailored to the client\'s specific needs.',
+      projectsDescription: 'Discover my completed projects. Each project represents a unique solution tailored to specific needs.',
       viewProject: 'View Project',
       visitSite: 'Visit Site',
       
@@ -142,7 +142,7 @@ const resources = {
       contactName: 'Name',
       contactNamePlaceholder: 'Your full name',
       contactEmail: 'Email',
-      contactEmailPlaceholder: 'your@email.com',
+      contactEmailPlaceholder: 'thaddeeboyogueno81@gmail.com',
       contactSubject: 'Subject',
       contactSubjectPlaceholder: 'Subject of your message',
       contactMessage: 'Message',
@@ -159,7 +159,7 @@ const resources = {
       whatsapp: 'WhatsApp',
       
       // Footer
-      footerDescription: 'Freelance web developer specialized in creating modern and performant websites.',
+      footerDescription: '21-year-old fullstack web developer, specialized in creating modern and performant websites with React, Node.js and more.',
       footerRights: 'All rights reserved',
       
       // Stats
@@ -171,13 +171,13 @@ const resources = {
       servicesTitle: 'My Services',
       servicesSubtitle: 'What I offer',
       serviceWebDev: 'Web Development',
-      serviceWebDevDesc: 'Custom website development with the latest technologies.',
-      serviceMobile: 'Mobile Applications',
-      serviceMobileDesc: 'Development of responsive and performant mobile applications.',
+      serviceWebDevDesc: 'Custom website development with the latest technologies (React, Next.js, Tailwind CSS).',
+      serviceMobile: 'Responsive Applications',
+      serviceMobileDesc: 'Development of applications that adapt perfectly to all screens.',
       serviceUIUX: 'UI/UX Design',
       serviceUIUXDesc: 'Design of intuitive and aesthetic user interfaces.',
-      serviceSEO: 'SEO Optimization',
-      serviceSEODesc: 'Improving your website\'s visibility on search engines.',
+      serviceSEO: 'Optimization',
+      serviceSEODesc: 'Improving your website\'s performance and visibility.',
     }
   }
 };

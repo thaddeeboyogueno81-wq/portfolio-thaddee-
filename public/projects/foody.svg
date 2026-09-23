@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa726;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff8a65;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffab40;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="white" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5f5f5;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bg1)" rx="20"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="70" fill="url(#bg2)" rx="20" ry="20"/>
+  <text x="300" y="45" text-anchor="middle" dominant-baseline="middle"
+        font-family="Comic Sans MS, cursive" font-size="32" font-weight="700" fill="#ffffff">
+    🍽️ Foody
+  </text>
+  
+  <!-- Search bar -->
+  <rect x="100" y="90" width="400" height="40" fill="#ffffff" rx="20" filter="url(#shadow)"/>
+  <text x="120" y="115" text-anchor="start" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="14" fill="#999999">
+    Rechercher des recettes, restaurants...
+  </text>
+  
+  <!-- Main content -->
+  <text x="300" y="150" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff">
+    Découvrez les meilleures recettes
+  </text>
+  <text x="300" y="180" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="14" fill="#ffffff" opacity="0.8">
+    Partagez vos créations culinaires
+  </text>
+  
+  <!-- Recipe cards -->
+  <rect x="50" y="210" width="180" height="120" fill="#ffffff" rx="10" filter="url(#shadow)"/>
+  <rect x="220" y="210" width="180" height="120" fill="#ffffff" rx="10" filter="url(#shadow)"/>
+  <rect x="390" y="210" width="180" height="120" fill="#ffffff" rx="10" filter="url(#shadow)"/>
+  
+  <!-- Food images placeholder -->
+  <circle cx="140" cy="270" r="30" fill="#ff6b6b" opacity="0.7"/>
+  <circle cx="310" cy="270" r="30" fill="#ffa726" opacity="0.7"/>
+  <circle cx="480" cy="270" r="30" fill="#4caf50" opacity="0.7"/>
+  
+  <!-- Recipe titles -->
+  <text x="140" y="300" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#333333">
+    Pâtes Carbonara
+  </text>
+  <text x="310" y="300" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#333333">
+    Pizza Margherita
+  </text>
+  <text x="480" y="300" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#333333">
+    Sushi Varié
+  </text>
+  
+  <!-- Ratings -->
+  <text x="140" y="320" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="10" fill="#ffa726">
+    ⭐⭐⭐⭐⭐ 4.8
+  </text>
+  <text x="310" y="320" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="10" fill="#ffa726">
+    ⭐⭐⭐⭐⭐ 4.9
+  </text>
+  <text x="480" y="320" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="10" fill="#ffa726">
+    ⭐⭐⭐⭐⭐ 4.7
+  </text>
+  
+  <!-- Navigation dots -->
+  <circle cx="200" cy="370" r="5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="250" cy="370" r="5" fill="#ffffff"/>
+  <circle cx="300" cy="370" r="5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="350" cy="370" r="5" fill="#ffffff" opacity="0.6"/>
+  
+  <!-- Footer -->
+  <rect x="0" y="390" width="600" height="10" fill="url(#bg2)" rx="20" ry="20"/>
+  <text x="300" y="395" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.8">
+    Foody - L'art culinaire à portée de main
+  </text>
+</svg>

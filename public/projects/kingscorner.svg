@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f3460;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#533483;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffb900;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bg1)" rx="20"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="80" fill="url(#bg2)" rx="20" ry="20"/>
+  <text x="300" y="50" text-anchor="middle" dominant-baseline="middle"
+        font-family="Georgia, serif" font-size="32" font-weight="700" fill="#ffd700">
+    KING'S CORNER
+  </text>
+  
+  <!-- Navigation -->
+  <rect x="50" y="100" width="500" height="40" fill="#1a1a2e" opacity="0.8" rx="5"/>
+  <text x="100" y="125" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="14" fill="#ffffff">
+    Accueil
+  </text>
+  <text x="250" y="125" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="14" fill="#ffffff">
+    Services
+  </text>
+  <text x="400" y="125" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="14" fill="#ffffff">
+    Contact
+  </text>
+  
+  <!-- Hero Section -->
+  <rect x="100" y="160" width="400" height="150" fill="#1a1a2e" opacity="0.6" rx="10"/>
+  <text x="300" y="200" text-anchor="middle" dominant-baseline="middle"
+        font-family="Georgia, serif" font-size="24" font-weight="600" fill="#ffd700">
+    Bienvenue chez
+  </text>
+  <text x="300" y="240" text-anchor="middle" dominant-baseline="middle"
+        font-family="Georgia, serif" font-size="36" font-weight="700" fill="#ffffff">
+    KING'S CORNER
+  </text>
+  <text x="300" y="280" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="14" fill="#cccccc">
+    L'excellence à votre service
+  </text>
+  
+  <!-- Decorative crown -->
+  <path d="M250 320 L270 300 L290 320 L300 300 L310 320 L330 300 L350 320 L340 340 L320 330 L300 340 L280 330 L260 340 Z"
+        fill="url(#gold)" opacity="0.8"/>
+  
+  <!-- Content sections -->
+  <rect x="150" y="320" width="300" height="60" fill="#1a1a2e" opacity="0.5" rx="5"/>
+  <text x="300" y="350" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="16" fill="#ffffff">
+    Découvrez nos services premium
+  </text>
+  
+  <!-- Footer -->
+  <rect x="0" y="380" width="600" height="20" fill="url(#bg2)" rx="20" ry="20"/>
+  <text x="300" y="395" text-anchor="middle" dominant-baseline="middle"
+        font-family="Arial, sans-serif" font-size="12" fill="#cccccc">
+    © 2024 King's Corner | Tous droits réservés
+  </text>
+</svg>

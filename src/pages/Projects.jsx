@@ -15,77 +15,44 @@ import {
 import AnimatedSection from '../components/AnimatedSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 
-// Sample projects data - replace with actual project data
+// Real projects data
 const projects = [
   {
     id: 1,
-    title: 'E-commerce Platform',
-    description: 'A modern e-commerce platform with advanced filtering, cart management, and secure checkout. Built with Next.js, TypeScript, and Stripe integration.',
-    image: '/projects/ecommerce.jpg',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe', 'MongoDB'],
-    category: 'Web Application',
-    date: 'June 2024',
-    github: 'https://github.com/thaddeeboyogueno81-wq/ecommerce-platform',
-    live: 'https://ecommerce-thaddee.vercel.app',
+    title: 'King\'s Corner',
+    description: 'Un site vitrine moderne pour présenter les services et produits de King\'s Corner. Développé avec des technologies web modernes pour une expérience utilisateur fluide et performante.',
+    image: '/projects/kingscorner.svg',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    category: 'Site Vitrine',
+    date: '2024',
+    github: 'https://github.com/thaddeeboyogueno81-wq',
+    live: 'https://kingscorner.netlify.app',
   },
   {
     id: 2,
-    title: 'Portfolio Template',
-    description: 'A customizable portfolio template for developers with dark/light mode, animations, and multi-language support. Built with React and Framer Motion.',
-    image: '/projects/portfolio.jpg',
-    technologies: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS', 'i18next'],
-    category: 'Template',
-    date: 'May 2024',
-    github: 'https://github.com/thaddeeboyogueno81-wq/portfolio-template',
-    live: 'https://portfolio-template-thaddee.vercel.app',
+    title: 'Foody',
+    description: 'Application de gestion de recettes et de restaurants. Permet aux utilisateurs de découvrir, noter et partager des recettes culinaires. Interface intuitive avec recherche et filtres avancés.',
+    image: '/projects/foody.svg',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'API'],
+    category: 'Application Web',
+    date: '2024',
+    github: 'https://github.com/thaddeeboyogueno81-wq/Foody',
+    live: 'https://thaddeeboyogueno81-wq.github.io/Foody/',
   },
   {
     id: 3,
-    title: 'Task Management App',
-    description: 'A productivity application for managing tasks with drag-and-drop functionality, team collaboration, and real-time updates.',
-    image: '/projects/task-manager.jpg',
-    technologies: ['React', 'Firebase', 'Redux', 'Drag & Drop', 'Material UI'],
-    category: 'Productivity',
-    date: 'April 2024',
-    github: 'https://github.com/thaddeeboyogueno81-wq/task-manager',
-    live: 'https://task-manager-thaddee.vercel.app',
-  },
-  {
-    id: 4,
-    title: 'Weather Dashboard',
-    description: 'A real-time weather dashboard with location detection, 5-day forecast, and beautiful animations. Built with React and OpenWeather API.',
-    image: '/projects/weather.jpg',
-    technologies: ['React', 'TypeScript', 'Weather API', 'Chart.js', 'Tailwind CSS'],
-    category: 'Weather App',
-    date: 'March 2024',
-    github: 'https://github.com/thaddeeboyogueno81-wq/weather-dashboard',
-    live: 'https://weather-thaddee.vercel.app',
-  },
-  {
-    id: 5,
-    title: 'Blog Platform',
-    description: 'A complete blog platform with markdown support, comments, and user authentication. Built with Next.js and Sanity CMS.',
-    image: '/projects/blog.jpg',
-    technologies: ['Next.js', 'Sanity CMS', 'Markdown', 'NextAuth', 'Tailwind CSS'],
-    category: 'CMS',
-    date: 'February 2024',
-    github: 'https://github.com/thaddeeboyogueno81-wq/blog-platform',
-    live: 'https://blog-thaddee.vercel.app',
-  },
-  {
-    id: 6,
-    title: 'Chat Application',
-    description: 'A real-time chat application with end-to-end encryption, group chats, and message reactions. Built with React and Socket.io.',
-    image: '/projects/chat.jpg',
-    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'JWT Authentication'],
-    category: 'Real-time App',
-    date: 'January 2024',
-    github: 'https://github.com/thaddeeboyogueno81-wq/chat-app',
-    live: 'https://chat-thaddee.vercel.app',
+    title: 'Viral Pulse IA',
+    description: 'Plateforme d\'intelligence artificielle pour l\'analyse des tendances virales. Utilise des algorithmes avancés pour prédire et analyser les contenus viraux sur les réseaux sociaux.',
+    image: '/projects/viralpulse.svg',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'IA', 'API'],
+    category: 'Application IA',
+    date: '2024',
+    github: 'https://github.com/thaddeeboyogueno81-wq/viral-pulse-IA',
+    live: 'https://thaddeeboyogueno81-wq.github.io/viral-pulse-IA/',
   },
 ];
 
-const categories = ['All', 'Web Application', 'Template', 'Productivity', 'Weather App', 'CMS', 'Real-time App'];
+const categories = ['All', 'Site Vitrine', 'Application Web', 'Application IA'];
 
 function Projects() {
   const { t } = useTranslation();
@@ -157,7 +124,7 @@ function Projects() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
-                placeholder={t('projects') + '...'}
+                placeholder="Rechercher un projet..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
@@ -242,7 +209,7 @@ function Projects() {
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.target.onerror = null;
-                          e.target.src = 'https://via.placeholder.com/600x400/4a90e2/ffffff?text=Project';
+                          e.target.src = 'https://via.placeholder.com/600x400/4a90e2/ffffff?text=' + encodeURIComponent(project.title);
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -330,24 +297,24 @@ function Projects() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                       >
-                        <Link
-                          to={`/projects/${project.id}`}
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="flex-1 flex items-center justify-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 hover:bg-primary-100 dark:hover:bg-primary-800/30 transition-colors text-sm font-medium"
                         >
                           <Eye className="w-4 h-4 mr-2" />
                           <span>Voir</span>
-                        </Link>
-                        {project.live && (
-                          <a
-                            href={project.live}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 flex items-center justify-center px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white transition-colors text-sm font-medium"
-                          >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            <span>Live</span>
-                          </a>
-                        )}
+                        </a>
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 flex items-center justify-center px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white transition-colors text-sm font-medium"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          <span>Visiter</span>
+                        </a>
                       </motion.div>
                     </motion.div>
                   </motion.div>
@@ -379,9 +346,7 @@ function Projects() {
             {projects.slice(0, 2).map((project, index) => (
               <motion.div
                 key={project.id}
-                className={`rounded-2xl overflow-hidden shadow-2xl ${
-                  index === 0 ? 'lg:col-span-2' : ''
-                }`}
+                className="rounded-2xl overflow-hidden shadow-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -394,7 +359,7 @@ function Projects() {
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = 'https://via.placeholder.com/800x500/4a90e2/ffffff?text=Featured+Project';
+                      e.target.src = 'https://via.placeholder.com/800x500/4a90e2/ffffff?text=' + encodeURIComponent(project.title);
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20" />

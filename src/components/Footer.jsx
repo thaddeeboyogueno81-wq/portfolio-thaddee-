@@ -12,8 +12,8 @@ import {
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/thaddeeboyogueno81-wq', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/thaddée-isaac-boyoguéno', label: 'LinkedIn' },
+  { icon: Twitter, href: 'https://twitter.com/thaddee_isaac', label: 'Twitter' },
 ];
 
 const quickLinks = [
@@ -24,8 +24,8 @@ const quickLinks = [
 ];
 
 const contactInfo = [
-  { icon: Mail, text: 'thaddee.isaac@example.com', href: 'mailto:thaddee.isaac@example.com' },
-  { icon: Phone, text: '+225 XX XX XX XX XX', href: 'tel:+225XXXXXXXXXX' },
+  { icon: Mail, text: 'thaddeeboyogueno81@gmail.com', href: 'mailto:thaddeeboyogueno81@gmail.com' },
+  { icon: Phone, text: '+225 69 05 73 15 6', href: 'tel:+225690573156' },
   { icon: MapPin, text: 'Abidjan, Côte d\'Ivoire', href: '#' },
 ];
 
