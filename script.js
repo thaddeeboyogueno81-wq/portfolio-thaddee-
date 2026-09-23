@@ -227,5 +227,22 @@ window.addEventListener('load', () => {
     }, 500);
 });
 
+// Also hide loading if DOM is ready but images take time
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        if (document.getElementById('loading').classList.contains('hidden')) return;
+        document.getElementById('loading').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+        initProjects();
+    }, 2000);
+});
+
 // Initialize
 document.body.style.overflow = 'hidden';
+
+// Fallback: Hide loading after 5 seconds max
+setTimeout(() => {
+    document.getElementById('loading').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+    initProjects();
+}, 5000);
