@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form-styles.css">
 </head>
 <body>
     <div class="loading" id="loading">
@@ -107,6 +108,7 @@
                         <div class="profile-image-container">
                             <img src="public/IMG-20260606-WA0066.jpg" alt="Thaddée Isaac Boyoguéno" class="profile-image" onerror="this.src='public/profile.svg'">
      
+
                        <div class="profile-badge-age">19</div>
                             <div class="profile-badge-initials">TB</div>
                         </div>
@@ -174,7 +176,8 @@
                     <h2 class="section-title" data-i18n="st_projects">Mes Réalisations</h2>
                 </div>
     
-            <div class="projects-filter">
+ 
+           <div class="projects-filter">
                     <div class="search-box"><i class="fas fa-search"></i><input type="text" id="projectSearch" data-i18n-placeholder="search_ph" placeholder="Rechercher..." oninput="filterProjects()"></div>
                     <div class="filter-buttons">
                         <button class="filter-btn active" data-filter="all" data-i18n="f_all" onclick="setFilter('all',this)">Tous</button>
@@ -195,6 +198,7 @@
                                     <a href="https://kingscorner.netlify.app" target="_blank" class="project-action-btn"><i class="fas fa-external-link-alt"></i></a>
                                 </div>
                    
+
          </div>
                         </div>
                         <div class="project-info">
@@ -236,7 +240,8 @@
                             <p class="project-description" data-i18n="pd3">Plateforme IA pour analyse des tendances virales.</p>
                             <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">IA</span></div>
                    
-         <div class="project-buttons"><a href="https://thaddeeboyogueno81-wq.github.io/viral-pulse-IA/" target="_blank" class="project-btn project-btn-live"><i class="fas fa-eye"></i> <span data-i18n="visit">Visiter</span></a></div>
+ 
+        <div class="project-buttons"><a href="https://thaddeeboyogueno81-wq.github.io/viral-pulse-IA/" target="_blank" class="project-btn project-btn-live"><i class="fas fa-eye"></i> <span data-i18n="visit">Visiter</span></a></div>
                         </div>
                     </div>
                 </div>
@@ -270,7 +275,8 @@
                     <h3 style="margin-bottom:1.5rem;" data-i18n="contact_form_title">Envoyez-moi un message</h3>
                     <form id="contactForm">
                         <div class="form-row">
-                            <div class="form-group">
+                    
+        <div class="form-group">
                                 <label for="name"><i class="fas fa-user"></i> <span data-i18n="lb_name">Nom</span></label>
                                 <div class="input-wrapper"><input type="text" id="name" class="form-input" data-i18n-placeholder="ph_name" placeholder="Votre nom" required></div>
                             </div>
