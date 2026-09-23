@@ -25,7 +25,7 @@ const quickLinks = [
 
 const contactInfo = [
   { icon: Mail, text: 'thaddeeboyogueno81@gmail.com', href: 'mailto:thaddeeboyogueno81@gmail.com' },
-  { icon: Phone, text: '+225 69 05 73 15 6', href: 'tel:+225690573156' },
+  { icon: Phone, text: '+237 690573156', href: 'tel:+237690573156' },
   { icon: MapPin, text: 'Abidjan, Côte d\'Ivoire', href: '#' },
 ];
 

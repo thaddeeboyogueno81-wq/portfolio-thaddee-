@@ -23,12 +23,12 @@ const socialLinks = [
   { icon: Github, href: 'https://github.com/thaddeeboyogueno81-wq', label: 'GitHub' },
   { icon: Linkedin, href: 'https://linkedin.com/in/thaddée-isaac-boyoguéno', label: 'LinkedIn' },
   { icon: Twitter, href: 'https://twitter.com/thaddee_isaac', label: 'Twitter' },
-  { icon: MessageSquare, href: 'https://wa.me/225690573156', label: 'WhatsApp' },
+  { icon: MessageSquare, href: 'https://wa.me/237690573156', label: 'WhatsApp' },
 ];
 
 const contactInfo = [
   { icon: Mail, text: 'thaddeeboyogueno81@gmail.com', href: 'mailto:thaddeeboyogueno81@gmail.com' },
-  { icon: Phone, text: '+225 69 05 73 15 6', href: 'tel:+225690573156' },
+  { icon: Phone, text: '+237 690573156', href: 'tel:+237690573156' },
   { icon: MapPin, text: 'Abidjan, Côte d\'Ivoire' },
   { icon: Clock, text: 'Lun - Ven: 9h - 18h' },
 ];
@@ -439,7 +439,7 @@ function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Basé à Abidjan, Côte d'Ivoire
+              Basé à Douala, Cameroun
             </motion.h2>
             <motion.p
               className="text-gray-600 dark:text-gray-400 max-w-md mx-auto"

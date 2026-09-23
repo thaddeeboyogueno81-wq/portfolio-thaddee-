@@ -181,7 +181,7 @@ function About() {
                       </div>
                       <div className="flex items-center space-x-2">
                         <MapPin className="w-5 h-5 text-gray-500" />
-                        <span className="text-gray-600 dark:text-gray-300">Abidjan, Côte d'Ivoire</span>
+                        <span className="text-gray-600 dark:text-gray-300">Douala, Cameroun</span>
                       </div>
                     </div>
                   </motion.div>
