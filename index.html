@@ -1,22 +1,298 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio de Thaddée Isaac Boyoguéno — Développeur web freelance : sites vitrines modernes, animés et multilingues pour tous types d'activités." />
-    <meta name="keywords" content="développeur web, freelance, portfolio, Thaddée Isaac Boyoguéno, création site web, développement frontend" />
-    <meta name="author" content="Thaddée Isaac Boyoguéno" />
-    <meta property="og:title" content="Thaddée Isaac Boyoguéno — Développeur Web Freelance" />
-    <meta property="og:description" content="Portfolio professionnel de Thaddée Isaac Boyoguéno - Développeur web spécialisé dans la création de sites modernes et performants." />
-    <meta property="og:type" content="website" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Thaddée Isaac Boyoguéno — Développeur web fullstack de 21 ans. Création de sites modernes, animés et multilingues.">
+    <meta name="keywords" content="développeur web, portfolio, Thaddée Isaac Boyoguéno, création site web, HTML CSS JavaScript">
+    <meta name="author" content="Thaddée Isaac Boyoguéno">
+    <title>Thaddée Isaac Boyoguéno — Développeur Web Fullstack</title>
+    <link rel="icon" type="image/svg+xml" href="profile.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>Thaddée Isaac Boyoguéno — Développeur Web Freelance</title>
-    <link rel="icon" type="image/svg+xml" href="/profile.svg" />
-  </head>
-  <body class="font-sans antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="success-message" id="successMessage">
+        <div class="success-icon"><i class="fas fa-check"></i></div>
+        <h3>Message envoyé avec succès !</h3>
+        <p>Je vous répondrai dans les plus brefs délais.</p>
+        <button class="btn btn-primary" onclick="closeSuccessMessage()">Fermer</button>
+    </div>
+
+    <header id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-avatar">TB</div>
+                <div>
+                    <div class="logo-text">Thaddée Isaac</div>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#hero" class="nav-link active">Accueil</a>
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#projects" class="nav-link">Projets</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-toggle" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i><span id="langText">FR</span>
+                </button>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars" id="mobileMenuIcon"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-links">
+                <li><a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()">Accueil</a></li>
+                <li><a href="#about" class="mobile-nav-link" onclick="closeMobileMenu()">À propos</a></li>
+                <li><a href="#projects" class="mobile-nav-link" onclick="closeMobileMenu()">Projets</a></li>
+                <li><a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
+            <div class="mobile-actions">
+                <button class="mobile-action-btn" onclick="toggleLanguage();closeMobileMenu();">
+                    <i class="fas fa-globe"></i><span id="mobileLangText">FR</span>
+                </button>
+                <button class="mobile-action-btn" onclick="toggleTheme();closeMobileMenu();">
+                    <i class="fas fa-moon" id="mobileThemeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <div class="hero-badge">Développeur Web Fullstack</div>
+                    <h1 class="hero-title">Thaddée Isaac Boyoguéno</h1>
+                    <p class="hero-subtitle">Création de sites web modernes et performants</p>
+                    <p class="hero-description">
+                        Je conçois des expériences digitales uniques qui transforment vos idées en réalité.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Voir mes projets <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <span>À propos</span>
+                    <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge">À propos</div>
+                    <h2 class="section-title">Qui suis-je ?</h2>
+                    <p class="section-subtitle">Développeur Web Fullstack de 21 ans</p>
+                </div>
+                <div class="about-content">
+                    <div class="profile-card slide-left">
+                        <div class="profile-image-container">
+                            <img src="profile.svg" alt="Thaddée Isaac Boyoguéno" class="profile-image" onerror="this.src='profile.svg'">
+                            <div class="profile-badge-age">21</div>
+                            <div class="profile-badge-initials">TB</div>
+                        </div>
+                        <div class="profile-info">
+                            <h2>Thaddée Isaac Boyoguéno</h2>
+                            <p>Développeur Web Fullstack</p>
+                            <div class="profile-location"><i class="fas fa-map-marker-alt"></i><span>Douala, Cameroun</span></div>
+                            <p class="profile-bio">Passionné par la technologie et le design, je crée des applications web performantes et esthétiques.</p>
+                            <div class="profile-actions">
+                                <a href="#contact" class="btn btn-primary">Me contacter <i class="fas fa-paper-plane"></i></a>
+                                <button class="btn btn-secondary" onclick="downloadCV()"><i class="fas fa-download"></i> CV</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text slide-right">
+                        <p>Avec une expertise en HTML, CSS, JavaScript, je suis capable de gérer des projets de A à Z, du concept à la mise en production.</p>
+                        <p style="margin-top:1rem;">J'aime résoudre des problèmes complexes avec des solutions élégantes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge">Compétences</div>
+                    <h2 class="section-title">Mes Compétences</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category fade-in">
+                        <div class="skill-category-header"><div class="skill-category-icon"><i class="fas fa-code"></i></div><h3>Frontend</h3></div>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="skill-name">HTML5</span><span class="skill-level">95%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div></li>
+                            <li class="skill-item"><span class="skill-name">CSS3</span><span class="skill-level">90%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div></li>
+                            <li class="skill-item"><span class="skill-name">JavaScript</span><span class="skill-level">95%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div></li>
+                            <li class="skill-item"><span class="skill-name">Tailwind CSS</span><span class="skill-level">85%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div></li>
+                        </ul>
+                    </div>
+                    <div class="skill-category fade-in" style="transition-delay:0.1s">
+                        <div class="skill-category-header"><div class="skill-category-icon"><i class="fas fa-server"></i></div><h3>Backend</h3></div>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="skill-name">Node.js</span><span class="skill-level">80%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div></li>
+                            <li class="skill-item"><span class="skill-name">Express</span><span class="skill-level">80%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div></li>
+                            <li class="skill-item"><span class="skill-name">PHP</span><span class="skill-level">75%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div></li>
+                            <li class="skill-item"><span class="skill-name">MySQL</span><span class="skill-level">70%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div></li>
+                        </ul>
+                    </div>
+                    <div class="skill-category fade-in" style="transition-delay:0.2s">
+                        <div class="skill-category-header"><div class="skill-category-icon"><i class="fas fa-tools"></i></div><h3>Outils</h3></div>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="skill-name">Git</span><span class="skill-level">85%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div></li>
+                            <li class="skill-item"><span class="skill-name">GitHub</span><span class="skill-level">85%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div></li>
+                            <li class="skill-item"><span class="skill-name">Figma</span><span class="skill-level">70%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div></li>
+                            <li class="skill-item"><span class="skill-name">Netlify</span><span class="skill-level">80%</span><div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge">Projets</div>
+                    <h2 class="section-title">Mes Réalisations</h2>
+                </div>
+                <div class="projects-filter">
+                    <div class="search-box"><i class="fas fa-search"></i><input type="text" id="projectSearch" placeholder="Rechercher..." oninput="filterProjects()"></div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">Tous</button>
+                        <button class="filter-btn" data-filter="Site Vitrine" onclick="setFilter('Site Vitrine',this)">Site Vitrine</button>
+                        <button class="filter-btn" data-filter="Application Web" onclick="setFilter('Application Web',this)">App Web</button>
+                        <button class="filter-btn" data-filter="Application IA" onclick="setFilter('Application IA',this)">App IA</button>
+                    </div>
+                </div>
+                <p class="projects-count" id="projectsCount">3 projets</p>
+                <div class="projects-grid" id="projectsGrid">
+                    <div class="project-card fade-in" data-category="Site Vitrine">
+                        <div class="project-image-container">
+                            <img src="projects/kingscorner.svg" alt="King's Corner" onerror="this.src='https://via.placeholder.com/600x400/3b82f6/ffffff?text=King%27s+Corner'">
+                            <div class="project-overlay"><span class="project-category">Site Vitrine</span>
+                                <div class="project-actions">
+                                    <a href="https://github.com/thaddeeboyogueno81-wq" target="_blank" class="project-action-btn"><i class="fas fa-code"></i></a>
+                                    <a href="https://kingscorner.netlify.app" target="_blank" class="project-action-btn"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>King's Corner <span class="project-date">2024</span></h3>
+                            <p class="project-description">Site vitrine moderne pour présenter services et produits.</p>
+                            <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span></div>
+                            <div class="project-buttons"><a href="https://kingscorner.netlify.app" target="_blank" class="project-btn project-btn-live"><i class="fas fa-eye"></i> Visiter</a></div>
+                        </div>
+                    </div>
+                    <div class="project-card fade-in" data-category="Application Web" style="transition-delay:0.1s">
+                        <div class="project-image-container">
+                            <img src="projects/foody.svg" alt="Foody" onerror="this.src='https://via.placeholder.com/600x400/06b6d4/ffffff?text=Foody'">
+                            <div class="project-overlay"><span class="project-category">Application Web</span>
+                                <div class="project-actions">
+                                    <a href="https://github.com/thaddeeboyogueno81-wq/Foody" target="_blank" class="project-action-btn"><i class="fas fa-code"></i></a>
+                                    <a href="https://thaddeeboyogueno81-wq.github.io/Foody/" target="_blank" class="project-action-btn"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Foody <span class="project-date">2024</span></h3>
+                            <p class="project-description">Application de gestion de recettes et restaurants.</p>
+                            <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">React</span></div>
+                            <div class="project-buttons"><a href="https://thaddeeboyogueno81-wq.github.io/Foody/" target="_blank" class="project-btn project-btn-live"><i class="fas fa-eye"></i> Visiter</a></div>
+                        </div>
+                    </div>
+                    <div class="project-card fade-in" data-category="Application IA" style="transition-delay:0.2s">
+                        <div class="project-image-container">
+                            <img src="projects/viralpulse.svg" alt="Viral Pulse IA" onerror="this.src='https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Viral+Pulse'">
+                            <div class="project-overlay"><span class="project-category">Application IA</span>
+                                <div class="project-actions">
+                                    <a href="https://github.com/thaddeeboyogueno81-wq/viral-pulse-IA" target="_blank" class="project-action-btn"><i class="fas fa-code"></i></a>
+                                    <a href="https://thaddeeboyogueno81-wq.github.io/viral-pulse-IA/" target="_blank" class="project-action-btn"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Viral Pulse IA <span class="project-date">2024</span></h3>
+                            <p class="project-description">Plateforme IA pour analyse des tendances virales.</p>
+                            <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span><span class="tech-tag">IA</span></div>
+                            <div class="project-buttons"><a href="https://thaddeeboyogueno81-wq.github.io/viral-pulse-IA/" target="_blank" class="project-btn project-btn-live"><i class="fas fa-eye"></i> Visiter</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <div class="section-badge">Contact</div>
+                    <h2 class="section-title">Contactez-moi</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info-card fade-in">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <p>thaddeeboyogueno81@gmail.com</p>
+                        <a href="mailto:thaddeeboyogueno81@gmail.com">Envoyer email</a>
+                    </div>
+                    <div class="contact-info-card fade-in" style="transition-delay:0.1s">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <p>+237 690573156</p>
+                        <a href="tel:+237690573156">Appeler</a>
+                    </div>
+                    <div class="contact-info-card fade-in" style="transition-delay:0.2s">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <p>Douala, Cameroun</p>
+                    </div>
+                </div>
+                <div class="contact-form-card fade-in" style="transition-delay:0.3s">
+                    <h3 style="margin-bottom:1.5rem;">Envoyez-moi un message</h3>
+                    <form id="contactForm">
+                        <div class="form-group"><label for="name">Nom</label><input type="text" id="name" placeholder="Votre nom" required></div>
+                        <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="votre@email.com" required></div>
+                        <div class="form-group"><label for="subject">Sujet</label><input type="text" id="subject" placeholder="Sujet" required></div>
+                        <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Votre message..." required></textarea></div>
+                        <button type="submit" class="submit-btn"><span>Envoyer</span><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo"><div class="footer-avatar">TB</div><div class="footer-text"><h3>Thaddée Isaac Boyoguéno</h3><p>Développeur Web Fullstack</p></div></div>
+                    <div class="social-links">
+                        <a href="https://github.com/thaddeeboyogueno81-wq" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/237690573156" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section"><h4>Liens</h4><ul><li><a href="#hero">Accueil</a></li><li><a href="#about">À propos</a></li><li><a href="#projects">Projets</a></li><li><a href="#contact">Contact</a></li></ul></div>
+                <div class="footer-section"><h4>Contact</h4><ul><li><a href="mailto:thaddeeboyogueno81@gmail.com">Email</a></li><li><a href="tel:+237690573156">Téléphone</a></li><li>Douala, Cameroun</li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>© 2024 Thaddée Isaac Boyoguéno - Tous droits réservés</p></div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
 </html>
