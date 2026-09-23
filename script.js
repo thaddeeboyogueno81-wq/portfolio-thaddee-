@@ -22,30 +22,99 @@ if (localStorage.getItem('theme') === 'dark') {
     document.getElementById('mobileThemeIcon').className = 'fas fa-sun';
 }
 
-// Language Toggle
-let currentLanguage = 'fr';
-function toggleLanguage() {
-    currentLanguage = currentLanguage === 'fr' ? 'en' : 'fr';
-    updateLanguage();
+// ===== Language Toggle (real FR/EN translation) =====
+let currentLanguage = localStorage.getItem('language') || 'fr';
+
+const I18N = {
+    nav_home: { fr: 'Accueil', en: 'Home' },
+    nav_about: { fr: 'À propos', en: 'About' },
+    nav_projects: { fr: 'Projets', en: 'Projects' },
+    nav_contact: { fr: 'Contact', en: 'Contact' },
+    hero_badge: { fr: 'Développeur Web Fullstack', en: 'Fullstack Web Developer' },
+    hero_subtitle: { fr: 'Création de sites web modernes et performants', en: 'Building modern and high-performing websites' },
+    hero_description: { fr: 'Je conçois des expériences digitales uniques qui transforment vos idées en réalité.', en: 'I design unique digital experiences that turn your ideas into reality.' },
+    scroll_about: { fr: 'À propos', en: 'About' },
+    hero_projects_btn: { fr: 'Voir mes projets', en: 'View my projects' },
+    hero_contact_btn: { fr: 'Me contacter', en: 'Contact me' },
+    sb_about: { fr: 'À propos', en: 'About' },
+    st_about: { fr: 'Qui suis-je ?', en: 'Who am I?' },
+    ss_about: { fr: 'Développeur Web Fullstack de 21 ans', en: '21-year-old Fullstack Web Developer' },
+    profile_role: { fr: 'Développeur Web Fullstack', en: 'Fullstack Web Developer' },
+    location: { fr: 'Yaoundé, Cameroun', en: 'Yaoundé, Cameroon' },
+    profile_bio: { fr: 'Passionné par la technologie et le design, je crée des applications web performantes et esthétiques.', en: 'Passionate about technology and design, I build high-performing and elegant web applications.' },
+    cv_btn: { fr: 'CV', en: 'Resume' },
+    about_p1: { fr: 'Avec une expertise en HTML, CSS, JavaScript, je suis capable de gérer des projets de A à Z, du concept à la mise en production.', en: 'With expertise in HTML, CSS and JavaScript, I can manage projects from A to Z, from concept to production.' },
+    about_p2: { fr: "J'aime résoudre des problèmes complexes avec des solutions élégantes.", en: 'I love solving complex problems with elegant solutions.' },
+    sb_skills: { fr: 'Compétences', en: 'Skills' },
+    st_skills: { fr: 'Mes Compétences', en: 'My Skills' },
+    sk_frontend: { fr: 'Frontend', en: 'Frontend' },
+    sk_backend: { fr: 'Backend', en: 'Backend' },
+    sk_tools: { fr: 'Outils', en: 'Tools' },
+    sb_projects: { fr: 'Projets', en: 'Projects' },
+    st_projects: { fr: 'Mes Réalisations', en: 'My Work' },
+    search_ph: { fr: 'Rechercher...', en: 'Search...' },
+    f_all: { fr: 'Tous', en: 'All' },
+    f_vitrine: { fr: 'Site Vitrine', en: 'Showcase Site' },
+    f_web: { fr: 'App Web', en: 'Web App' },
+    f_ia: { fr: 'App IA', en: 'AI App' },
+    pc1: { fr: 'Site Vitrine', en: 'Showcase Site' },
+    pc2: { fr: 'Application Web', en: 'Web Application' },
+    pc3: { fr: 'Application IA', en: 'AI Application' },
+    pd1: { fr: 'Site vitrine moderne pour présenter services et produits.', en: 'Modern showcase website to present services and products.' },
+    pd2: { fr: 'Application de gestion de recettes et restaurants.', en: 'Recipe and restaurant management application.' },
+    pd3: { fr: 'Plateforme IA pour analyse des tendances virales.', en: 'AI platform for analysing viral trends.' },
+    visit: { fr: 'Visiter', en: 'Visit' },
+    sb_contact: { fr: 'Contact', en: 'Contact' },
+    st_contact: { fr: 'Contactez-moi', en: 'Contact me' },
+    send_email: { fr: 'Envoyer email', en: 'Send email' },
+    call: { fr: 'Appeler', en: 'Call' },
+    contact_form_title: { fr: 'Envoyez-moi un message', en: 'Send me a message' },
+    lb_name: { fr: 'Nom', en: 'Name' },
+    lb_subject: { fr: 'Sujet', en: 'Subject' },
+    ph_name: { fr: 'Votre nom', en: 'Your name' },
+    ph_email: { fr: 'votre@email.com', en: 'your@email.com' },
+    ph_subject: { fr: 'Sujet', en: 'Subject' },
+    ph_message: { fr: 'Votre message...', en: 'Your message...' },
+    submit: { fr: 'Envoyer', en: 'Send' },
+    sm_title: { fr: 'Message envoyé avec succès !', en: 'Message sent successfully!' },
+    sm_text: { fr: 'Je vous répondrai dans les plus brefs délais.', en: 'I will reply as soon as possible.' },
+    sm_close: { fr: 'Fermer', en: 'Close' },
+    ft_links: { fr: 'Liens', en: 'Links' },
+    ft_contact: { fr: 'Contact', en: 'Contact' },
+    ft_phone: { fr: 'Téléphone', en: 'Phone' },
+    fb_text: { fr: '© 2024 Thaddée Isaac Boyoguéno - Tous droits réservés', en: '© 2024 Thaddée Isaac Boyoguéno - All rights reserved' }
+};
+
+const PAGE_TITLES = {
+    fr: 'Thaddée Isaac Boyoguéno — Développeur Web Fullstack',
+    en: 'Thaddée Isaac Boyoguéno — Fullstack Web Developer'
+};
+
+function applyTranslations() {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const t = I18N[el.getAttribute('data-i18n')];
+        if (t) el.textContent = t[currentLanguage];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const t = I18N[el.getAttribute('data-i18n-placeholder')];
+        if (t) el.setAttribute('placeholder', t[currentLanguage]);
+    });
+    document.title = PAGE_TITLES[currentLanguage];
+    document.documentElement.setAttribute('lang', currentLanguage);
 }
 
 function updateLanguage() {
     const langText = document.getElementById('langText');
     const mobileLangText = document.getElementById('mobileLangText');
-    if (currentLanguage === 'fr') {
-        langText.textContent = 'FR';
-        mobileLangText.textContent = 'FR';
-    } else {
-        langText.textContent = 'EN';
-        mobileLangText.textContent = 'EN';
-    }
+    if (langText) langText.textContent = currentLanguage.toUpperCase();
+    if (mobileLangText) mobileLangText.textContent = currentLanguage.toUpperCase();
     localStorage.setItem('language', currentLanguage);
+    applyTranslations();
+    updateProjectsCount();
 }
 
-// Load saved language
-const savedLanguage = localStorage.getItem('language');
-if (savedLanguage) {
-    currentLanguage = savedLanguage;
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'fr' ? 'en' : 'fr';
     updateLanguage();
 }
 
@@ -141,36 +210,43 @@ function initProjects() {
     allProjects = Array.from(document.querySelectorAll('.project-card'));
 }
 
+function updateProjectsCount() {
+    const el = document.getElementById('projectsCount');
+    if (!el) return;
+    const n = allProjects.filter(p => p.style.display !== 'none').length;
+    if (currentLanguage === 'fr') {
+        el.textContent = n + (n === 1 ? ' projet' : ' projets');
+    } else {
+        el.textContent = n + (n === 1 ? ' project' : ' projects');
+    }
+}
+
 function filterProjects() {
     const searchTerm = document.getElementById('projectSearch').value.toLowerCase();
-    let visibleCount = 0;
     allProjects.forEach(project => {
         const title = project.querySelector('h3').textContent.toLowerCase();
         const description = project.querySelector('.project-description').textContent.toLowerCase();
         if (title.includes(searchTerm) || description.includes(searchTerm)) {
             project.style.display = 'block';
-            visibleCount++;
         } else {
             project.style.display = 'none';
         }
     });
-    document.getElementById('projectsCount').textContent = visibleCount + ' ' + (visibleCount === 1 ? 'projet' : 'projets');
+    updateProjectsCount();
 }
 
 function setFilter(category, button) {
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
-    let visibleCount = 0;
     allProjects.forEach(project => {
         const projectCategory = project.getAttribute('data-category');
         if (category === 'all' || projectCategory === category) {
             project.style.display = 'block';
-            visibleCount++;
         } else {
             project.style.display = 'none';
         }
     });
-    document.getElementById('projectsCount').textContent = visibleCount + ' ' + (visibleCount === 1 ? 'projet' : 'projets');
+    updateProjectsCount();
 }
 
 // Contact Form
@@ -188,17 +264,17 @@ contactForm.addEventListener('submit', async (e) => {
         message: document.getElementById('message').value
     };
     submitBtn.disabled = true;
-    submitText.textContent = 'Envoi...';
+    submitText.textContent = currentLanguage === 'fr' ? 'Envoi...' : 'Sending...';
     submitIcon.className = 'fas fa-spinner fa-spin';
     try {
         await new Promise(resolve => setTimeout(resolve, 2000));
         showSuccessMessage();
         contactForm.reset();
     } catch (error) {
-        alert('Erreur. Veuillez reessayer.');
+        alert(currentLanguage === 'fr' ? 'Erreur. Veuillez reessayer.' : 'Error. Please try again.');
     } finally {
         submitBtn.disabled = false;
-        submitText.textContent = 'Envoyer';
+        applyTranslations();
         submitIcon.className = 'fas fa-paper-plane';
     }
 });
@@ -213,9 +289,9 @@ function closeSuccessMessage() {
     document.body.style.overflow = '';
 }
 
-// Download CV
+// CV
 function downloadCV() {
-    alert('CV à télécharger (à configurer)');
+    window.location.href = 'cv.html';
 }
 
 // Loading Screen
@@ -227,7 +303,6 @@ window.addEventListener('load', () => {
     }, 500);
 });
 
-// Also hide loading if DOM is ready but images take time
 window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         if (document.getElementById('loading').classList.contains('hidden')) return;
@@ -237,12 +312,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 2000);
 });
 
-// Initialize
 document.body.style.overflow = 'hidden';
 
-// Fallback: Hide loading after 5 seconds max
 setTimeout(() => {
     document.getElementById('loading').classList.add('hidden');
     document.body.style.overflow = 'auto';
     initProjects();
 }, 5000);
+
+// Initialize language on load
+updateLanguage();
